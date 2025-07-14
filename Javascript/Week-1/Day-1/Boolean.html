@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <p id="message"></p>
+    <p id="authenticate"></p>
+    <script>
+         var age = 20;
+         var wish = "Happy birthday! heep heep heep Hoorey!";
+         const itIsBirthday = (age == 30 ? true : false);
+         var message = document.getElementById('message');
+          if( itIsBirthday ){ 
+             message.innerText = wish;
+         }else{ 
+             message.innerText = "Sorry! today is a normal day not anybodies birthday!";
+          }
+              
+         var authenticated  = true;
+         var welcomeText = "Welcome back! Michael";
+         const loggedIn = (authenticated ? true : false);
+
+         var message = document.getElementById('authenticate');
+             if(loggedIn){
+                message.innerText = welcomeText;
+             }else{
+                message.innerText = "Sorry! you need to login to use this application";
+             }
+
+
+    </script>
+</body>

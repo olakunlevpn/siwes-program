@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="message">
+
+    </h1>
+
+    <p id="auth"></p>
+    
+    <script>
+
+       const age = Number(prompt("Enter your bithYeah"))
+
+       const message = document.querySelector(".message")
+       const auth = document.getElementById('auth')
+
+       const wish = "It's your Birthdayy"
+
+       const itIsBirthday = age === 20
+
+       
+
+      if(itIsBirthday){
+        message.innerText = wish
+      }else{
+        message.innerText = "It's normal day, not your day"
+      }
+
+
+   const authenticate = itIsBirthday
+
+   if(authenticate){
+       auth.innerText = "You are welcome to the house"
+   }else{
+    auth.innerText = "You are not accessible, try to log first"
+   }
+
+    
+
+    </script>
+</body>
+</html>
