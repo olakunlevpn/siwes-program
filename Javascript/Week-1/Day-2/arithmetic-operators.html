@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <script>
+            // === Addition and Concatenation ===
+            let numA = 12;
+            let numB = 14;
+            let numericSum = numA + numB;
+            console.log(numericSum); // 26: numeric addition
+
+            let greeting = "Hello ";
+            let word = "addition";
+            let greetingMessage = greeting + word;
+            console.log(greetingMessage); // "Hello addition": string concatenation
+
+            // === Intro Sentence Example ===
+            let userName = "Maaike";
+            let userAge = 29;
+            let canCodeJS = true;
+
+            console.log(`Hello, my name is ${userName}, I am ${userAge} years old and I can code JavaScript: ${canCodeJS}.`);
+            // Output: Hello, my name is Maaike, I am 29 years old and I can code JavaScript: true.
+
+            // === Subtraction ===
+            let subNum1 = 20;
+            let subNum2 = 4;
+            let subStr = "Hi";
+            let subNum3 = 3;
+
+            let subtractionResult1 = subNum1 - subNum2;
+            let subtractionResult2 = subStr - subNum3;
+
+            console.log(subtractionResult1, subtractionResult2); // 16, NaN: can't subtract string and number
+
+            // === Multiplication ===
+            let mulNum1 = 15;
+            let mulNum2 = 10;
+            let mulStr = "Hi";
+            let mulNum3 = 3;
+
+            let multiplicationResult1 = mulNum1 * mulNum2;
+            let multiplicationResult2 = mulStr * mulNum3;
+
+            console.log(multiplicationResult1, multiplicationResult2); // 150, NaN
+
+            // === Division ===
+            let divNum1 = 30;
+            let divNum2 = 5;
+
+            let divisionResult = divNum1 / divNum2;
+            console.log(divisionResult); // 6
+
+            // === Exponentiation ===
+            let baseNum = 2;
+            let exponentNum = 3;
+
+            let powerResult = baseNum ** exponentNum;
+            console.log(powerResult); // 8
+
+            // === Modulus ===
+            let modNum1 = 10;
+            let modNum2 = 3;
+            let modResult1 = modNum1 % modNum2;
+            console.log(`${modNum1} % ${modNum2} = ${modResult1}`); // 1
+
+            let modNum3 = 8;
+            let modNum4 = 2;
+            let modResult2 = modNum3 % modNum4;
+            console.log(`${modNum3} % ${modNum4} = ${modResult2}`); // 0
+
+            let modNum5 = 15;
+            let modNum6 = 4;
+            let modResult3 = modNum5 % modNum6;
+            console.log(`${modNum5} % ${modNum6} = ${modResult3}`); // 3
+
+            // === Unary Operators: Increment and Decrement ===
+            let incrementNum = 4;
+            incrementNum++;
+            console.log(incrementNum); // 5
+
+            let decrementNum = 4;
+            decrementNum--;
+            console.log(decrementNum); // 3
+
+            // === Prefix vs Postfix ===
+            let postFixNum = 2;
+            console.log(postFixNum++); // 2
+            console.log(postFixNum);   // 3
+
+            let preFixNum = 2;
+            console.log(++preFixNum); // 3
+
+            // === Complex Expression with Precedence ===
+            let exprNum1 = 4;
+            let exprNum2 = 5;
+            let exprNum3 = 2;
+            console.log(exprNum1++ + ++exprNum2 * exprNum3++); 
+            // 4 + (6 * 2) = 4 + 12 = 16
+
+
+    </script>
+</body>

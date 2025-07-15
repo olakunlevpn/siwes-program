@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <script>
+        let inche = 2.54;
+        let pounds = 2.2046;
+        let inches = prompt('Please enter the number of inches');
+        let weight = prompt('Please enter the weight'); 
+        let hightOnInCm = inches * inche; 
+        let heighinMeters = hightOnInCm / 100;
+        let weightinKg = heighinMeters / pounds;
+        let bmi = weightinKg / (heighinMeters * heighinMeters);
+    
+        console.log('Result in Inches ', hightOnInCm.toFixed(2));
+        console.log('Result in cm ', inche.toFixed(2));
+        console.log('Result in pounds ', pounds.toFixed(2));
+        console.log('Result in KG ', weightinKg.toFixed(2));
+        console.log('Result in bmi ', bmi.toFixed(2));
+    </script>
+</body>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <script>
+        // === Comparison Operators ===
+        let x = 5;
+        let y = "5";
+
+        console.log(x == y);      // true: equal in value (loose equality)
+        console.log(x === y);     // false: not equal in type (strict equality)
+
+        console.log(x != y);      // false: values are equal (loose not-equal)
+        console.log(x !== y);     // true: values/types are not strictly equal
+
+        // === Greater Than & Less Than ===
+        let a = 5;
+        let b = 6;
+
+        console.log(b > a);       // true: 6 is greater than 5
+        console.log(a > b);       // false: 5 is not greater than 6
+        console.log(b > b);       // false: 6 is not greater than 6
+        console.log(b >= b);      // true: 6 is equal to 6
+
+        console.log(b < a);       // false: 6 is not less than 5
+        console.log(a < b);       // true: 5 is less than 6
+        console.log(b < b);       // false: 6 is not less than 6
+        console.log(b <= b);      // true: 6 is equal to 6
+
+        // === Logical Operators ===
+        let x1 = 1;
+        let y1 = 2;
+        let z1 = 3;
+
+        console.log(x1 < y1 && y1 < z1); // true: both conditions are true (1 < 2 and 2 < 3)
+        console.log(x1 > y1 && y1 < z1); // false: first condition is false (1 > 2)
+
+        console.log(x1 > y1 || y1 < z1); // true: second condition is true (2 < 3)
+        console.log(x1 > y1 || y1 > z1); // false: both conditions are false
+
+        // === Not Operator ===
+        let flag = false;
+        console.log(!flag);             // true: negates false to true
+
+        let m = 1;
+        let n = 2;
+        console.log(!(m < n));          // false: 1 < 2 is true, negated to false
+
+    </script>
+</body>

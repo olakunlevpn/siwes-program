@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <script>
+        // 1. What data type is the following variable?
+        const c1 = "5";
+        console.log(typeof c1); // string
+
+        // 2. What data type is the following variable?
+        const c2 = 91;
+        console.log(typeof c2); // number
+
+        // 3. Which one is generally better?
+        let empty1 = undefined; // line 1
+        let empty2 = null;      // line 2
+        // ✅ Prefer null when intentionally clearing a value — clearer intent.
+
+        // 4. What is the console output?
+        let a1 = "Hello";
+        a1 = "world";
+        console.log(a1); // "world": value reassigned
+
+        // 5. What will be logged to the console?
+        let a2 = "world";
+        let b2 = `Hello ${a2}!`;
+        console.log(b2); // "Hello world!"
+
+        // 6. What is the value of a?
+        let a3 = "Hello";
+        // a3 = prompt("world"); // ❗Commented out to avoid runtime input prompt
+        a3 = "SimulatedPromptInput"; // simulate user input
+        console.log(a3); // "SimulatedPromptInput"
+
+        // 7. What is the value of b output to the console?
+        let a4 = 5;
+        let b4 = 70;
+        let c4 = "5";
+        b4++;
+        console.log(b4); // 71: incremented after assignment
+
+        // 8. What is the value of result?
+        let result = 3 + 4 * 2 / 8;
+        // Order: 4*2 = 8 → 8/8 = 1 → 3+1 = 4
+        console.log(result); // 4
+
+        // 9. What is the value of total and total2?
+        let firstNum = 5;
+        let secondNum = 10;
+        firstNum++;           // becomes 6
+        secondNum--;          // becomes 9
+        let total = ++firstNum + secondNum;
+        // ++firstNum = 7, secondNum = 9 → 7 + 9 = 16
+        console.log(total); // 16
+
+        let total2 = 500 + 100 / 5 + total--;
+        // 100 / 5 = 20 → 500 + 20 + 16 = 536 → total becomes 15 after this
+        console.log(total2); // 536
+
+        // 10. What is logged to the console here?
+        const a5 = 5;
+        const b5 = 10;
+        console.log(a5 > 0 && b5 > 0);      // true: both are greater than 0
+        console.log(a5 == 5 && b5 == 4);    // false: b5 is not 4
+        console.log(true || false);        // true: OR operator returns true
+        console.log(a5 == 3 || b5 == 10);  // true: second condition is true
+        console.log(a5 == 3 || b5 == 7);   // false: both conditions are false
+
+    </script>
+</body>
