@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <script>
+        let person = { 
+            name: "John Timothy",
+            age: 25, 
+            color: "black",
+            shirt: { 
+              size: 45, 
+              color: "Red"
+            },
+            height: 5.9,
+            gender: "Male",
+            isANigerian: true,
+            havePassPort: false
+        }
+
+        console.log(person.name);
+        console.log(person.shirt.size);
+
+        person.havePassPort = true;
+
+        console.log(person)
+
+        let NewName = "name";
+        person[NewName] = "Khadija";
+
+        console.log(person[NewName])
+
+
+        let company = { companyName: "Healthy Candy",
+                        activity: "food manufacturing",
+                        address: {
+                        street: "2nd street",
+                        number: "123",
+                        zipcode: "33116",
+                        city: "Miami",
+                        state: "Florida"
+                    },
+                        yearOfEstablishment: 2021
+                    };
+
+console.log(`Address is ${company.address.number}   ${company.address.street},  ${company.address.city}, ${company.address.zipcode}`)
+
+let addr = company.address
+console.log(`Address is ${addr.number}   ${addr.street},  ${addr.city}, ${addr.zipcode}`)
+
+    </script>
+</body>

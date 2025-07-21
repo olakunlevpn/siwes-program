@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <script>
+         var list = ['Milk', 'Bread', 'Apples'];
+         console.log("The items in your card is" , list)
+         console.log(list.length)
+         list[1] = "Banana";
+         console.log("The items in your card is" , list)
+
+
+         //find
+
+        arr8 = [ 2, 6, 7, 8 ];
+        let findValue = arr8.find(function(e){ 
+            return e === 6
+        });
+        let findValue2 = arr8.find(e => e === 10);
+        console.log(findValue, findValue2);
+
+
+        //find position of array with 
+        arr8 = [ 2, 6, 7, 8 ];
+        let findIndex = arr8.indexOf(6);
+        let findIndex2 = arr8.indexOf(10);
+        console.log(findIndex, findIndex2);
+    </script>
+</body>

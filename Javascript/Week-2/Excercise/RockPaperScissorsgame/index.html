@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors Game</h1>
+    <p>Choose your weapon and battle the computer!</p>
+    
+    <button onclick="playGame(0)">Rock</button>
+    <button onclick="playGame(1)">Paper</button>
+    <button onclick="playGame(2)">Scissors</button>
+    
+    <div id="choiceDisplay"></div>
+    <div id="results"></div>
+    <div id="score">Player: 0 | Computer: 0</div>
+    
+    <button onclick="resetGame()">Reset Game</button>
+
+    <script>
+        // Array with game choices
+        const choices = ["Rock", "Paper", "Scissors"];
+        
+        // Score variables
+        let playerScore = 0;
+        let computerScore = 0;
+        
+        function playGame(playerChoice) {
+            // Random number for computer choice
+            const computerChoice = Math.floor(Math.random() * 3);
+            
+            // Get choice names
+            const playerChoiceText = choices[playerChoice];
+            const computerChoiceText = choices[computerChoice];
+            
+            // Show choices
+            document.getElementById('choiceDisplay').innerHTML = 
+                "You: " + playerChoiceText + "<br>Computer: " + computerChoiceText;
+            
+            let resultMessage = "";
+            
+            // Check for tie
+            if (playerChoice === computerChoice) {
+                resultMessage = "It's a tie!";
+            } 
+            // Check if player wins
+            else if (
+                (playerChoice === 0 && computerChoice === 2) ||
+                (playerChoice === 1 && computerChoice === 0) ||
+                (playerChoice === 2 && computerChoice === 1)
+            ) {
+                resultMessage = "You win!";
+                playerScore++;
+            } 
+            else {
+                resultMessage = "Computer wins!";
+                computerScore++;
+            }
+            
+            // Show results
+            document.getElementById('results').innerHTML = 
+                "<h3>" + resultMessage + "</h3>" +
+                "<p><b>You chose:</b> " + playerChoiceText + "</p>" +
+                "<p><b>Computer chose:</b> " + computerChoiceText + "</p>";
+            
+            // Update score
+            document.getElementById('score').textContent = "Player: " + playerScore + " | Computer: " + computerScore;
+        }
+        
+        function resetGame() {
+            playerScore = 0;
+            computerScore = 0;
+            document.getElementById('score').textContent = `Player: 0 | Computer: 0`;
+            document.getElementById('results').innerHTML = "";
+            document.getElementById('choiceDisplay').innerHTML = "";
+        }
+
+    </script>
+</body>
+</html>
