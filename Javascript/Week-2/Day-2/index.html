@@ -15,90 +15,10 @@
 
 
 
-        //exercise 5.3
-        let myWork = [];
-
-        for (let i = 1; i <= 10; i++) {
-        let status = i % 2 === 0 ? false : true;
-
-            let lesson = {
-                name: `Lesson ${i}`,
-                status: status
-            };
-
-            myWork.push(lesson);
-        }
-
-        console.log(myWork);
 
 
 
-        //exercise 5.4
-        let myTable = [];
-
-        let rows = 5;
-        let columns = 4;
-
-        let counterNumb = 0;
-
-        for (let i = 0; i < rows; i++) {
-            let tempTable = [];
-            
-            for (let j = 0; j < columns; j++) {
-                counterNumb++;
-                tempTable.push(counterNumb);
-            }
-            
-            myTable.push(tempTable);
-        }
-
-        console.table(myTable);
-
-
-        // exercise 5.5
-        let grid = [];
-
-        let cells = 64;
-        let counter = 0;
-        let row;
-
-        for (let i = 0; i < cells + 1; i++) {
-            if (counter % 8 === 0) {
-                if (row !== undefined) {
-                    grid.push(row);
-                }
-                row = [];
-            }
-            
-            counter++;
-            let temp = counter;
-            row.push(temp);
-            
-            if (counter === cells) {
-                grid.push(row);
-            }
-        }
-
-        console.log(grid);
-
-
-        // exercise 5.6
-        let arrRay = [];
-
-        for (let i = 0; i < 10; i++) {
-            arrRay.push(i);
-        }
-
-        console.log(arrRay);
-
-        for (let i = 0; i < arrRay.length; i++) {
-            console.log(arrRay[i]);
-        }
-
-        for (let value of arrRay) {
-            console.log(value);
-        }
-
+       
 
         //exercise 5.7
         let obj = {
