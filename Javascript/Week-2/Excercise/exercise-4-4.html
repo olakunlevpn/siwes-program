@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <script>
+   let randomValue = Math.floor(Math.random() * 6);
+
+    let userQuestion = prompt("Ask the Magic 8-Ball a question:");
+
+    let response;
+
+    switch (randomValue) {
+        case 0:
+            response = "Yes, definitely!";
+            break;
+        case 1:
+            response = "It is decidedly so.";
+            break;
+        case 2:
+            response = "Reply hazy, try again.";
+            break;
+        case 3:
+            response = "Cannot predict now.";
+            break;
+        case 4:
+            response = "Don't count on it.";
+            break;
+        case 5:
+            response = "My sources say no.";
+            break;
+    }
+
+    console.log(`You asked: ${userQuestion}`);
+    console.log(`Magic 8-Ball says: ${response}`);
+    </script>
+</body>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <script>
+        const theList = ['Laurence', 'Svekis', true, 35, null, undefined,
+        {test: 'one', score: 55}, ['one', 'two']];
+
+        // Remove first and last items
+        theList.shift();
+        theList.pop();
+ 
+        // Add FIRST to start
+        theList.unshift("FIRST");
+
+        // Assign hello World to fourth item
+        theList[3] = "hello World";
+
+        // Assign MIDDLE to third index
+        theList[2] = "MIDDLE";
+
+        // Add LAST to end
+        theList.push("LAST");
+
+        // Output result
+        console.log(theList);
+    </script>
+</body>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <script>
+     let multiplicationTable = [];
+        let values = 12;
+
+        for (let i = 1; i <= values; i++) {
+            let tempRow = [];
+            
+            for (let j = 1; j <= values; j++) {
+                tempRow.push(i * j);
+            }
+            
+            multiplicationTable.push(tempRow);
+        }
+
+        console.table(multiplicationTable);
+    </script>
+</body>

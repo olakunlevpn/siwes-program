@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .red { 
+        color: #f40000;
+    }
+    .green{ 
+        color: #72f400;
+    }
+
+  </style>
+</head>
+<body>
+
+    <div id="textMessage" class="" style="font-size: 30px;">Hello World</div>
+    <script>
+        let message = document.getElementById('textMessage');
+        let input = "hello";
+     let access = (input.length > 6 ? message.className = "green" :  message.className = "red");
+     console.log(access)
+
+
+     let id = 20; 
+
+      let clubAccess  = id == 20 ? "Welcome to the club, nigga" : "Sorry you are not a memeber of this club";
+      console.log(clubAccess)
+
+
+      const userNames = ["Mike", "John", "Larry"];
+      const userInput = "John";
+      let htmlOutput = "";
+      console.log(userNames.indexOf(userInput))
+      if (userNames.indexOf(userInput) > -1) {
+      htmlOutput = "Welcome, that is a user";
+      } else {
+      htmlOutput = "Denied, not a user ";
+      }
+      console.log(htmlOutput + ": " + userInput);
+
+
+      let val = 100;
+let messages = (val > 100) ? `${val} was greater than 100` :
+`${val} was LESS or Equal to 100`;
+console.log(messages);
+let check = (val % 2) ? `Odd` : `Even`;
+check = `${val} is ${check}`;
+console.log(check);
+
+
+let someArray = ["Mike", "Antal", "Marc", "Emir", "Louiza", "Jacky"];
+let notFound = true;
+while (notFound && someArray.length > 0) {
+ if (someArray[0] === "Louiza") {
+ console.log("Found her!");
+ notFound = false;
+ } else {
+ someArray.shift();
+ console.log(someArray);
+ }
+}
+    </script>
+</body>
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <script>
+                // Ask user's age
+        let userAge = prompt("What is your age?");
+
+        // Convert to number
+        userAge = Number(userAge);
+
+        // Declare message variable
+        let message;
+
+        // Check age conditions
+        if (userAge >= 21) {
+            message = "Welcome! You can enter the venue and purchase alcohol.";
+        }
+        else if (userAge >= 19) {
+            message = "Welcome! You can enter the venue but cannot purchase alcohol.";
+        }
+        else {
+            message = "Sorry, you cannot enter the venue.";
+        }
+
+        // Output message
+        console.log(message);
+    </script>
+</body>
