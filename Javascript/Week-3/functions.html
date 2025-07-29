@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <script>
+    function calculation(numb1, numb2, operator) {
+        let totalSum; 
+      if(operator == "+"){
+         totalSum = addition(numb1, numb2);
+      }else if(operator == "-"){
+         totalSum = division(numb1, numb2);
+      }
+
+      console.log(totalSum);
+    }
+
+    calculation(12, 11, "-");
+
+      function thismeansthatthefirst(){
+
+      }
+
+      function thisMeansThatTheFirst(){
+        
+      }
+
+    function addition (number1, number2){
+        return number1 + number2;
+    }
+
+     function division (number1, number2){
+        return number1 - number2;
+    }
+
+   function sayHello(){
+     let you = prompt("WHats your name ? ")
+     console.log(`Welcome to the club ${you} glad to have you here`);
+   }
+
+   //sayHello();
+
+
+
+   function addNumber (number1, number2){
+      return number1 + number2;
+   }
+
+   let addinngNumber1 = addNumber(10, 12);
+   let addinngNumber2 = addNumber(50, 120);
+
+   console.log(addinngNumber1);
+   console.log(addinngNumber2);
+
+   console.log(addNumber(15, 21)); 
+
+
+   function randomGreetings(){
+     let greetings = ["You are the best person in the world", 
+                      "Glad i have met you, welcome",
+                     "Welcome yo my world", 
+                     "Welcome star moon!"];
+    let user = prompt('Whats your name? ')
+     let random = Math.floor(Math.random() * greetings.length);
+  console.log(random)
+
+
+     console.log(`${user} ${greetings[random]}`);
+
+   }
+
+
+   //randomGreetings();
+
+   function addTwoNumbers(x = 2, y = 3) {
+    console.log(x + y);
+    }
+
+    addTwoNumbers()
+
+
+    function person(name, gender = "male"){
+        return name + " " + gender;
+    }
+
+    person("Michale", "Female")
+
+
+    function sayHello() {
+      let you = prompt("What's your name? ");
+      console.log("Hello", you + "!");
+    }
+
+
+    let varContainingFunction = function() {
+      let varInFunction = "I'm in a function.";
+      console.log("hi there!", varInFunction);
+    };
+    varContainingFunction();
+
+
+
+    function tester(para1, para2){
+           return para1 + " " + para2;
+    }
+      const arg1 = "argument 1";
+      const arg2 = "argument 2";
+      tester(arg1, arg2);
+
+
+      function addTwoNumbers(a, b) {
+         return a + b;
+      }
+
+      let num1 = 15;
+      let num2 = 27;
+
+      console.log(addTwoNumbers(num1, num2));
+
+      console.log(addTwoNumbers(8, 12));
+
+      let descriptiveWords = ["amazing", "brilliant", "creative", "delightful", "energetic", "fantastic", "generous", "hilarious", "inspiring", "joyful"];
+
+      function describeName() {
+         let name = prompt("Enter a name:");
+         let randomIndex = Math.floor(Math.random() * descriptiveWords.length);
+         let randomWord = descriptiveWords[randomIndex];
+         console.log(name + " is " + randomWord);
+      }
+
+      describeName();
+    </script>
+</body>
