@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>
+
+      </title>
+    </head>
+    <body>
+
+        <script>
+            let number =  10; 
+
+            function countdown(number){
+                console.log(number)
+                if(number < 1){
+                    return;
+                }
+
+                if(number >= 1){
+                    countdown(number -1)
+                }
+            }
+
+            function countdown2(number){
+                if(number > 0){
+                    let newNumber = number -1; 
+                    countdown2(number)
+                }
+
+                return;
+            }
+
+
+
+              let syncName = function(name, anotherFunction){
+                  anotherFunction(); 
+
+                  console.log(name); 
+              }
+
+             let  anotherFunction = function() {
+                 console.log("We are checking for names.")
+             }
+
+             syncName("John Timothy", anotherFunction);
+            
+
+             var addFive1 = function addFive1(num) {
+return num + 2;
+};
+let addFive2 = (num) => num + 2;
+console.log(addFive1(14));
+
+
+class Person { 
+
+    #firstname; 
+    #lastname;
+
+    constructor(firstname, lastname){
+         this.#firstname = firstname; 
+         this.#lastname = lastname;
+    }
+
+    greet(){
+        console.log("Hey firned " + this.#firstname + " " + this.#lastname)
+
+    }
+
+    getFirstname(){
+        return this.#firstname;
+    }
+
+     getLastname(){
+        return this.#lastname;
+    }
+
+    getFullName(){
+        return this.#firstname + " " + this.#lastname 
+    }
+
+    log(x){
+        console.log(x)
+    }
+
+    get firstname(){
+        return this.#firstname;
+    }
+
+    set firstname(newNema){
+        this.#lastname = newNema;
+    }
+
+}
+
+let friend = new Person("John", "Timithy");
+friend.lastname = "Janet"
+console.log(friend.lastname)
+        </script>
+    </body>
+    
+
+</html>
