@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>
+
+      </title>
+    </head>
+    <body>
+
+        <script>
+        class Calculator { 
+
+            constructor(addition, substraction, division, module){
+               this.addition = addition;
+               this.substraction = substraction;
+               this.division = division;
+               this.module = module;
+            }
+
+            addNumber(number1, number2){
+                return number1 + number2;
+            }
+
+            makeDivision(number1, number2){
+                return number1 / number2;
+            }
+
+            addSubstraction(number1, number2){
+                return number1 - number2;
+            }
+
+            Start(){
+                console.log("Application is starting....");
+            }
+        }
+
+        class Phone extends Calculator { 
+            constructor(addition, substraction, division, module){
+                super(addition, substraction, division, module)
+            }
+        }
+
+
+        let phone = new  Phone("+", "-", "/", "%");
+        phone.Start();
+        console.log(phone.addNumber(2,8));
+
+      
+        let s = "Hello";
+console.log(s.concat(" there!").toUpperCase().replace("THERE", "you").concat(" You're amazing!"));
+        </script>
+    </body>
+    
+
+</html>
