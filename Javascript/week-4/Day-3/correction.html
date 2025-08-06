@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+ <div class="output">
+    <h1>Hello</h1>
+    <div>Test</div>
+    <ul>
+    <li id="one">One</li>
+    <li class="red">Two</li>
+    </ul>
+    <div>Test</div>
+</div>
+       
+      
+
+        <script>
+            // 1. element with the class output.
+            const output = document.querySelector('.output')
+
+            const mainList  = output.children[2];
+            mainList.setAttribute('id', 'mainList');
+                    
+             const outputDiv = document.querySelectorAll('div')
+            
+           outputDiv.forEach(div => console.log(div))
+
+           for(i = 0; i < outputDiv.length; i++){
+               outputDiv[i].id = "parapgrapth-" + i; 
+               outputDiv[i].style = "color:" + (i === 1 ? "red" : (i === 2 ? "blue" : "black" )); 
+           }
+
+           console.log(outputDiv)
+
+            
+
+        </script>
+       
+</body>
+</html>

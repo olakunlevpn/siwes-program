@@ -1,0 +1,28 @@
+<!DOCTYPE html >
+<style>
+ .red{ 
+    color: #f40000;
+ }
+ .green { 
+    color: #00f404;
+ }
+</style>
+<html>
+<div class="output"></div>
+<button class="button">Green</button>
+ <script>
+    let pageElement = document.querySelector('.output');
+    pageElement.innerHTML = "<h1>Hey we are live!</h1>"
+    pageElement.classList.add("red");
+    pageElement.setAttribute('id', 'tester');
+    pageElement.setAttribute('style', "background: #f40000;")
+    let url = document.URL; 
+    pageElement.innerHTML = "<h1>Hey we are live! and the url is <a href=" + url + "> " + url + "</a> </h1>"
+
+    let button = document.querySelector("button");
+    button.addEventListener('click', function(){
+         pageElement.classList.remove("red");
+         pageElement.classList.add("green");
+    })
+ </script>
+</html>
