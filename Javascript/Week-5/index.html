@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<head>
+
+    <style>
+        .p-5{ 
+            display: block;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="message(this)">Click Me</button>
+    <button onclick="message(this)">Enter Me</button>
+
+
+
+    <p id="magic">I might disappear and appear.</p>
+    <button onclick="toggleDisplay()">Magic!</button>
+
+
+    <div>
+        <div class="message"></div>
+        <form id="formContainer"> 
+            <div class="p-5">
+                <input type="text" name="fullname" id="fullname" placeholder="Your full name" />
+                <span id="fullnameError" style="display: none; color: red;">please enter your full name!</span>
+            </div>
+             <div class="p-5">
+                <input type="text" name="email" id="email" placeholder="Your email" />
+            </div>
+             <div class="p-5">
+                <input type="text" name="subject" id="subject" placeholder="Your subject" />
+            </div>
+             <div class="p-5">
+                <textarea type="text" name="message" id="message"></textarea>
+            </div>
+
+             <div class="p-5">
+                <button type="button" id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+     <div id="numbers">
+       <p>2</p>
+        <p>3</p>
+         <p>4</p>
+     </div>
+
+
+ <button onclick="addRandomNumber()">Add a number</button>
+    <script>
+        function addRandomNumber(){
+            let el = document.createElement("p");
+            el.innerText = Math.floor(Math.random() * 100);
+            document.body.appendChild(el);
+        }
+
+
+let paragrapth = document.createElement("p"); 
+  paragrapth.innerText = "1"; 
+  document.getElementById('numbers').prepend(paragrapth)
+
+        let button = document.getElementById('submit');
+            button.addEventListener('click', handleForm) 
+            function handleForm(){
+               
+                let fullName = document.getElementById('fullname');
+                 if(fullName.value.length < 5){
+                    document.getElementById('fullnameError').setAttribute('style', 'display:block; color: red;')
+                    fullName.setAttribute('style', 'border: 1px solid red; color: red; ');
+                 }else{
+                     document.getElementById('fullnameError').setAttribute('style', 'display:none')
+                    fullName.setAttribute('style', '');
+                    let formHolder =  document.getElementById('formContainer');
+                    formHolder.setAttribute('style', 'display:none')
+                    document.getElementById('formContainer').setAttribute('style', 'display:none')
+                
+                    let message = document.querySelector('.message');
+                    message.innerHTML = "<p>Your message has been submitted, and we will get back to you shortly, please do not resend your message again for fast response. regards the team.</p>"
+                    message.setAttribute('style', 'display:block')
+
+                    setTimeout(function(){
+                        formHolder.setAttribute('style', 'display:block')
+                        message.setAttribute('style', 'display:none')
+                    }, 5000)
+                 }
+
+            }
+        function toggleDisplay() {
+            let p = document.getElementById("magic");
+            if (p.style.display === "none") {
+                p.style.display = "block";
+            } else {
+                p.style.display = "none";
+            }
+        }
+
+        function message(el) {
+            console.dir(el)
+        }
+    </script>
+</body>

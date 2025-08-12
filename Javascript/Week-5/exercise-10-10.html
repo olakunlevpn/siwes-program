@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="message">Complete JavaScript Course</div>
+        <div>
+            <input type="text" id="addItem">
+            <input type="button" id="addNew" value="Add to List"> 
+        </div>
+        <div id="output">
+        <h1>Shopping List</h1>
+        <ol id="sList"> </ol>
+    </div>
+    
+    <script>
+    
+    let button = document.getElementById('addNew'); 
+    let pageList = document.getElementById('sList');
+    let newInput = document.getElementById('addItem');
+
+    button.addEventListener('click', addOne)
+
+     document.addEventListener('keypress', function(event){
+         if(event.key === "Enter"){
+            addOne()
+         }
+     })
+
+     function addOne(){
+           let inputValue = newInput.value.trim(); 
+           if(inputValue !== ''){
+                let Listli = document.createElement('li');
+                let textNode = document.createTextNode(inputValue)
+                Listli.appendChild(textNode)
+                 pageList.appendChild(Listli);
+
+                 newInput.value = '';
+           }
+     }
+           
+
+
+    </script>
+</body>
+</html>
